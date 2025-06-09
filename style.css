@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+.calculator {
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+}
+
+#display {
+    width: calc(100% - 20px);
+    height: 60px;
+    background-color: #444;
+    color: #fff;
+    font-size: 2.5em;
+    text-align: right;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box; /* Include padding in width */
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.buttons button {
+    width: 100%;
+    height: 60px;
+    font-size: 1.8em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    background-color: #666;
+    color: #fff;
+}
+
+.buttons button:hover {
+    background-color: #888;
+}
+
+.buttons .operator {
+    background-color: #ff9500;
+}
+
+.buttons .operator:hover {
+    background-color: #cc7a00;
+}
+
+.buttons .clear {
+    background-color: #d9534f;
+}
+
+.buttons .clear:hover {
+    background-color: #c9302c;
+}
+
+/* Make the '=' button span two rows and the '0' button span two columns */
+.buttons button:nth-child(15) { /* = button */
+    grid-row: span 2;
+    height: auto;
+}
+
+.buttons .zero {
+    grid-column: span 2;
+}
